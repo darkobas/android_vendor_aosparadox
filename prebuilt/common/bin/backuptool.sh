@@ -5,60 +5,42 @@
 
 export C=/tmp/backupdir
 export S=/system
-export V=6
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
-  mkdir -p /tmp/addon.d/
-  cp -a /system/addon.d/* /tmp/addon.d/
-  chmod 755 /tmp/addon.d/*.sh
+  if [ -d /system/addon.d/ ]; then
+    mkdir -p /tmp/addon.d/
+    cp -a /system/addon.d/* /tmp/addon.d/
+    chmod 755 /tmp/addon.d/*.sh
+  fi
 }
 
-# Restore /system/addon.d in /tmp/addon.d
+# Restore /system/addon.d from /tmp/addon.d
 restore_addon_d() {
-  cp -a /tmp/addon.d/* /system/addon.d/
-  rm -rf /tmp/addon.d/
-}
-
-# Proceed only if /system is the expected major and minor version
-check_prereq() {
-if ( ! grep -q "^ro.build.version.release=$V.*" /system/build.prop ); then
-  echo "Not backing up files from incompatible version: $V"
-  exit 127
-fi
-}
-
-check_blacklist() {
-  if [ -f /system/addon.d/blacklist ];then
-      ## Discard any known bad backup scripts
-      cd /$1/addon.d/
-      for f in *sh; do
-          s=$(md5sum $f | awk {'print $1'})
-          grep -q $s /system/addon.d/blacklist && rm -f $f
-      done
+  if [ -d /tmp/addon.d/ ]; then
+    cp -a /tmp/addon.d/* /system/addon.d/
+    rm -rf /tmp/addon.d/
   fi
 }
 
 # Execute /system/addon.d/*.sh scripts with $1 parameter
 run_stage() {
-for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
-  $script $1
-done
+if [ -d /tmp/addon.d/ ]; then
+  for script in $(find /tmp/addon.d/ -name '*.sh' |sort -n); do
+    $script $1
+  done
+fi
 }
 
 case "$1" in
   backup)
     mkdir -p $C
-    check_prereq
-    check_blacklist system
     preserve_addon_d
     run_stage pre-backup
     run_stage backup
     run_stage post-backup
   ;;
   restore)
-    check_prereq
-    check_blacklist tmp
     run_stage pre-restore
     run_stage restore
     run_stage post-restore

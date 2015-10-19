@@ -14,7 +14,6 @@
         <item>power</item>
         <item>reboot</item>
         <item>airplane</item>
-        <item>bugreport</item>
     </string-array>
     
     <!-- enable doze powersaving mode -->
