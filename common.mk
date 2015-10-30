@@ -43,6 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Packages
 PRODUCT_PACKAGES += \
     Launcher2 \
+    OpenDelta \
     libemoji
 
 # Common overlay
@@ -74,9 +75,9 @@ ifneq ($(filter falcon titan,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/bootanimation/AOSParadox_720_bootanimation.zip:system/media/bootanimation.zip
 endif
-ifneq ($(filter bacon lux,$(PRODUCT_DEVICE)),)
+ifneq ($(filter bacon lux,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/bootanimation/AOSParadox_1080_bootanimation.zip:system/media/bootanimation.zip
+    vendor/aosparadox/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
 
 # AOSParadox Version
