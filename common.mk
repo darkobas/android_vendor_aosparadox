@@ -42,8 +42,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Packages
 PRODUCT_PACKAGES += \
+    AudioFX \
+    Apollo \
     Launcher2 \
     OpenDelta \
+    SnapdragonCamera \
     libemoji
 
 # Common overlay
@@ -81,5 +84,5 @@ PRODUCT_COPY_FILES += \
 endif
 
 # AOSParadox Version
-PAR_VERSION := $(TARGET_DEVICE)-$(shell date -u +%Y%m%d)
+PAR_VERSION := $(shell date -u +%Y%m%d)
 PRODUCT_PROPERTY_OVERRIDES += ro.par.version =$(PAR_VERSION)
