@@ -44,7 +44,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     Apollo \
-    Launcher2 \
+    Launcher3 \
     OpenDelta \
     SnapdragonCamera \
     libemoji
