@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     OpenDelta \
     SnapdragonCamera \
+    PrebuiltBugle \
     libemoji
 
 # Common overlay
