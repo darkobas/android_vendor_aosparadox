@@ -18,8 +18,6 @@ LOCAL_PATH := $(call my-dir)
 
 ifneq ($(filter bacon,$(TARGET_DEVICE)),)
 
-ifeq ($(QCPATH),)
-
 include $(CLEAR_VARS)
 LOCAL_MODULE := PrebuiltBugle
 LOCAL_MODULE_OWNER := Google
@@ -31,3 +29,4 @@ LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
+endif
