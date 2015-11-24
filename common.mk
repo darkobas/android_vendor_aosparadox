@@ -74,6 +74,10 @@ PRODUCT_COPY_FILES += \
     vendor/aosparadox/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/aosparadox/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
+# changelog copy
+PRODUCT_COPY_FILES += \
+    Changelog.txt:system/etc/changelog.txt
+
 # Boot Animantion
 ifneq ($(filter falcon titan,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
