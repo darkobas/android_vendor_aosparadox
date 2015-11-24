@@ -43,13 +43,9 @@ restore_file() {
 case "$1" in
     backup)
         backup_file
-        load_prop "$backupfile"
-        backup_prop
         ;;
     restore)
         restore_file
-        load_prop "$backupfile"
-        restore_prop
         ;;
     pre-backup)
         ;;
