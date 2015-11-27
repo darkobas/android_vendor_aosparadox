@@ -97,7 +97,7 @@ fi
 
 export OPT_CPUS=$(bc <<< "($CPUS-1)*2")
 opt_clean=0
-opt_jobs="$OPT_CPUS"
+opt_jobs="$CPUS"
 opt_sync=0
 opt_log=0
 
@@ -114,9 +114,10 @@ while getopts "c:hj:lsu" opt; do
   esac
 done
 shift $((OPTIND-1))
-rm out/target/product/bacon/darkobas-bacon*.zip
-rm -rf /data/M/out/target/product/bacon/obj/ETC/system_build_prop_intermediates
-rm /data/M/out/target/product/bacon/system/build.prop
+rm out/target/product/bacon/darkobas-bacon*.zip &> /dev/null
+rm out/target/product/bacon/darkobas-bacon*.md5sum &> /dev/null
+rm -rf /data/M/out/target/product/bacon/obj/ETC/system_build_prop_intermediates &> /dev/null 
+rm /data/M/out/target/product/bacon/system/build.prop &> /dev/null
 device="$1"
 variant="$2"
 version="$3"
@@ -218,11 +219,6 @@ cmmnd="lunch \"full_${device}-$variant\""
 lunch "full_${device}-$variant"
 cmmnd_check
 echo "${bldgrn}SUCCES:${txtrst} Environment setup succesfully"
-
-# Remove system folder (this will create a new build.prop with updated build time and date)
-rm -f "$OUTDIR/target/product/$device/system/build.prop"
-rm -f "$OUTDIR/target/product/$device/system/app/*.odex"
-rm -f "$OUTDIR/target/product/$device/system/framework/*.odex"
 
 # Start compiling
 echo ""
