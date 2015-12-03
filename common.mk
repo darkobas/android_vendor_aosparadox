@@ -48,7 +48,14 @@ PRODUCT_PACKAGES += \
     OpenDelta \
     SnapdragonCamera \
     PrebuiltBugle \
-    libemoji
+    LockClock \
+    libemoji \
+    ntfsfix \
+    ntfs-3g
+
+# Include librsjni explicitly to workaround GMS issue
+PRODUCT_PACKAGES += \
+    librsjni
 
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += \
