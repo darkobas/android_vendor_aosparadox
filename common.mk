@@ -81,6 +81,16 @@ PRODUCT_COPY_FILES += \
     vendor/aosparadox/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/aosparadox/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
+# init.d support
+PRODUCT_COPY_FILES += \
+    vendor/aosparadox/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/aosparadox/prebuilt/common/etc/init.d/00banner:system/etc/init.d/90userinit \
+    vendor/aosparadox/prebuilt/common/bin/sysinit:system/bin/sysinit
+
+# Init script file with custom extras
+PRODUCT_COPY_FILES += \
+    vendor/aosparadox/prebuilt/common/etc/init.local.rc:root/init.custom.rc
+
 # changelog copy
 PRODUCT_COPY_FILES += \
     Changelog.txt:system/etc/changelog.txt
