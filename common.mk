@@ -44,6 +44,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     Apollo \
+    DaylightHeaderHDPoly \
     Launcher3 \
     OpenDelta \
     SnapdragonCamera \
