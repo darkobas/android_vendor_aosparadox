@@ -43,7 +43,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Packages
 PRODUCT_PACKAGES += \
     AudioFX \
+    android-visualizer \
     Apollo \
+    Browser \
     DaylightHeaderHDPoly \
     Launcher3 \
     OpenDelta \
