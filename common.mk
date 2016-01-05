@@ -51,9 +51,11 @@ PRODUCT_PACKAGES += \
     OpenDelta \
     SnapdragonCamera \
     PrebuiltBugle \
+    GalleryNext \
     LockClock \
     libemoji \
     ntfsfix \
+    busybox \
     ntfs-3g
 
 # Include librsjni explicitly to workaround GMS issue
@@ -80,8 +82,10 @@ PRODUCT_COPY_FILES += \
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/prebuilt/common/addon.d/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/aosparadox/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
-    vendor/aosparadox/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/aosparadox/prebuilt/common/addon.d/71-layers.sh:system/addon.d/71-layers.sh \
+    vendor/aosparadox/prebuilt/common/addon.d/50-darkobas.sh:system/addon.d/50-darkobas.sh \
+    vendor/aosparadox/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/aosparadox/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/aosparadox/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
 # init.d support
@@ -89,6 +93,11 @@ PRODUCT_COPY_FILES += \
     vendor/aosparadox/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/aosparadox/prebuilt/common/etc/init.d/00banner:system/etc/init.d/90userinit \
     vendor/aosparadox/prebuilt/common/bin/sysinit:system/bin/sysinit
+
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/aosparadox/prebuilt/SuperSU.zip:system/addon.d/SuperSU.zip \
+    vendor/aosparadox/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Init script file with custom extras
 PRODUCT_COPY_FILES += \
