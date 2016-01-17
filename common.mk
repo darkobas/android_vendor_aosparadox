@@ -94,16 +94,6 @@ PRODUCT_COPY_FILES += \
     vendor/aosparadox/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/aosparadox/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# Stagefright FFMPEG plugin
-PRODUCT_PACKAGES += \
-    libffmpeg_extractor \
-    libffmpeg_omx \
-    media_codecs_ffmpeg.xml
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    media.sf.omx-plugin=libffmpeg_omx.so \
-    media.sf.extractor-plugin=libffmpeg_extractor.so
-
 # Init script file with custom extras
 PRODUCT_COPY_FILES += \
     vendor/aosparadox/prebuilt/common/etc/init.local.rc:root/init.custom.rc
