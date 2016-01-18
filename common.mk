@@ -42,9 +42,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    AudioFX \
     android-visualizer \
-    Apollo \
+    Eleven \
     Browser \
     DaylightHeaderHDPoly \
     Launcher3 \
