@@ -4,4 +4,4 @@
 #
 
 BOARD_SEPOLICY_DIRS += \
-    vendor/aosparadox/sepolicy
+    vendor/darkobas/sepolicy

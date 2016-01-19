@@ -63,7 +63,7 @@ PRODUCT_PACKAGES += \
 
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/aosparadox/overlay/common
+    vendor/darkobas/overlay/common
 
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
@@ -71,31 +71,31 @@ PRODUCT_COPY_FILES += \
 
 # Media effects
 PRODUCT_COPY_FILES +=  \
-    vendor/aosparadox/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
-    vendor/aosparadox/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
+    vendor/darkobas/prebuilt/common/media/LMspeed_508.emd:system/vendor/media/LMspeed_508.emd \
+    vendor/darkobas/prebuilt/common/media/PFFprec_600.emd:system/vendor/media/PFFprec_600.emd
 
 # APN list
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+    vendor/darkobas/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
  
 # Backup Tool
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/prebuilt/common/addon.d/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/aosparadox/prebuilt/common/addon.d/71-layers.sh:system/addon.d/71-layers.sh \
-    vendor/aosparadox/prebuilt/common/addon.d/50-darkobas.sh:system/addon.d/50-darkobas.sh \
-    vendor/aosparadox/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
-    vendor/aosparadox/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
-    vendor/aosparadox/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+    vendor/darkobas/prebuilt/common/addon.d/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/darkobas/prebuilt/common/addon.d/71-layers.sh:system/addon.d/71-layers.sh \
+    vendor/darkobas/prebuilt/common/addon.d/50-darkobas.sh:system/addon.d/50-darkobas.sh \
+    vendor/darkobas/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/darkobas/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/darkobas/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/aosparadox/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/aosparadox/prebuilt/common/bin/sysinit:system/bin/sysinit
+    vendor/darkobas/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/darkobas/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
+    vendor/darkobas/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Init script file with custom extras
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/prebuilt/common/etc/init.local.rc:root/init.custom.rc
+    vendor/darkobas/prebuilt/common/etc/init.local.rc:root/init.custom.rc
 
 # changelog copy
 PRODUCT_COPY_FILES += \
@@ -104,11 +104,11 @@ PRODUCT_COPY_FILES += \
 # Boot Animantion
 ifneq ($(filter falcon titan,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/bootanimation/AOSParadox_720_bootanimation.zip:system/media/bootanimation.zip
+    vendor/darkobas/bootanimation/AOSParadox_720_bootanimation.zip:system/media/bootanimation.zip
 endif
 ifneq ($(filter bacon lux,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
-    vendor/aosparadox/bootanimation/bootanimation.zip:system/media/bootanimation.zip
+    vendor/darkobas/bootanimation/bootanimation.zip:system/media/bootanimation.zip
 endif
 
 # AOSParadox Version
