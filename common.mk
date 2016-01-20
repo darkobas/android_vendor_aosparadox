@@ -43,7 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Packages
 PRODUCT_PACKAGES += \
     android-visualizer \
-    Eleven \
+    Apollo \
     Browser \
     DaylightHeaderHDPoly \
     Launcher3 \
@@ -92,10 +92,6 @@ PRODUCT_COPY_FILES += \
     vendor/darkobas/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/darkobas/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/darkobas/prebuilt/common/bin/sysinit:system/bin/sysinit
-
-# Init script file with custom extras
-PRODUCT_COPY_FILES += \
-    vendor/darkobas/prebuilt/common/etc/init.local.rc:root/init.custom.rc
 
 # changelog copy
 PRODUCT_COPY_FILES += \
