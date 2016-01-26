@@ -50,7 +50,6 @@ PRODUCT_PACKAGES += \
     OpenDelta \
     SnapdragonCamera \
     PrebuiltBugle \
-    GalleryNext \
     LockClock \
     libemoji \
     ntfsfix \
