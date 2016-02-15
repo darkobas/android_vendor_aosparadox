@@ -46,6 +46,7 @@ PRODUCT_PACKAGES += \
     Apollo \
     Browser \
     DaylightHeaderHDPoly \
+    OmniStyle \
     Launcher3 \
     OpenDelta \
     SnapdragonCamera \
