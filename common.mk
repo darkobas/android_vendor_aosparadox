@@ -45,7 +45,6 @@ PRODUCT_PACKAGES += \
     android-visualizer \
     Apollo \
     Browser \
-    DaylightHeaderHDPoly \
     OmniStyle \
     Launcher3 \
     OpenDelta \
