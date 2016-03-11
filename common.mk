@@ -42,19 +42,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Packages
 PRODUCT_PACKAGES += \
+    icu_tzdata \
     android-visualizer \
     Apollo \
+    AudioFX \
     Browser \
     OmniStyle \
     Launcher3 \
     OpenDelta \
-    SnapdragonCamera \
+    Snap \
     PrebuiltBugle \
     LockClock \
     libemoji \
-    ntfsfix \
     static_busybox \
-    ntfs-3g
+    mount.ntfs \
+    mkfs.ntfs \
+    fsck.ntfs
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
