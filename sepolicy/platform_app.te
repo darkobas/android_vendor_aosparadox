@@ -5,3 +5,5 @@ allow platform_app sdcard_posix:file create_file_perms;
 
 allow platform_app recovery_cache_file:dir { search write add_name };
 allow platform_app recovery_cache_file:file { create write open getattr };
+
+allow platform_app system_app_data_file:file rw_file_perms;
