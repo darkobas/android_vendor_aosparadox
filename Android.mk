@@ -62,13 +62,4 @@ LOCAL_CERTIFICATE := PRESIGNED
 LOCAL_PRIVILEGED_MODULE := true
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE := icu_tzdata
-LOCAL_MODULE_CLASS := EXECUTABLES
-LOCAL_SRC_FILES := prebuilt/icu_tzdata.dat
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .dat
-LOCAL_MODULE_PATH := $(TARGET_OUT_DATA)/misc/zoneinfo/current/icu
-include $(BUILD_PREBUILT)
-
 endif

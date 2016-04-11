@@ -42,7 +42,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Packages
 PRODUCT_PACKAGES += \
-    icu_tzdata \
     android-visualizer \
     Apollo \
     AudioFX \
