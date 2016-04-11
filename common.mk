@@ -46,7 +46,7 @@ PRODUCT_PACKAGES += \
     android-visualizer \
     Apollo \
     AudioFX \
-    Browser \
+    Chromium \
     OmniStyle \
     Launcher3 \
     OpenDelta \
