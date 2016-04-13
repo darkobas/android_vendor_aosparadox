@@ -94,6 +94,9 @@ PRODUCT_COPY_FILES += \
     vendor/darkobas/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/darkobas/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# Include LatinIME dictionaries
+ PRODUCT_PACKAGE_OVERLAYS += vendor/darkobas/overlay/dictionaries
+
 # changelog copy
 PRODUCT_COPY_FILES += \
     Changelog.txt:system/etc/changelog.txt
