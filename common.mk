@@ -112,5 +112,5 @@ PRODUCT_COPY_FILES += \
 endif
 
 # AOSParadox Version
-PAR_VERSION := $(shell date -u +%Y%m%d)-$(DARKOBASV)
+PAR_VERSION := $(shell date +%Y%m%d)-$(DARKOBASV)
 PRODUCT_PROPERTY_OVERRIDES += ro.par.version =$(PAR_VERSION)
