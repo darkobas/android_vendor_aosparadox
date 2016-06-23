@@ -39,6 +39,15 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_APPS)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
+LOCAL_MODULE       := OppoCam
+LOCAL_MODULE_TAGS  := optional
+LOCAL_MODULE_CLASS := APPS
+LOCAL_SRC_FILES    := prebuilt/OppoCam.apk
+LOCAL_CERTIFICATE  := PRESIGNED
+LOCAL_MODULE_PATH  := $(TARGET_OUT_APPS)
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
 LOCAL_MODULE := GalleryNext
 LOCAL_MODULE_OWNER := CyanogenMod
 LOCAL_SRC_FILES := prebuilt/gallerynext.apk
