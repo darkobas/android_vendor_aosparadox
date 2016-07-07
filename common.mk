@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
     OmniStyle \
     Launcher3 \
     OpenDelta \
+    Snap \
     OppoCam \
     PrebuiltBugle \
     LockClock \
