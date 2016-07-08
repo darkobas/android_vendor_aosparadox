@@ -89,6 +89,10 @@ PRODUCT_COPY_FILES += \
     vendor/darkobas/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/darkobas/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/darkobas/prebuilt/common/etc/backup.xml:system/etc/sysconfig/backup.xml
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/darkobas/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
