@@ -50,7 +50,6 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     OpenDelta \
     Snap \
-    OppoCam \
     PrebuiltBugle \
     LockClock \
     libemoji \
