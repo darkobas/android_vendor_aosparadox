@@ -43,7 +43,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Packages
 PRODUCT_PACKAGES += \
     android-visualizer \
-    Apollo \
+    Music \
     AudioFX \
     Chromium \
     OmniStyle \
